@@ -35,5 +35,10 @@ public class EmployeeController {
 		Employee employee = repo.getDeatilsByUserName(username);
 		return new ResponseEntity(employee,HttpStatus.FOUND);
 	}
+	
+	@GetMapping("/message")
+	public String wishEmployee() {
+		return "Hello Employee How are you";
+	}
 
 }
